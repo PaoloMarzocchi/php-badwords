@@ -5,15 +5,51 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bad words</title>
+    <style>
+        body {
+            text-align: center;
+
+        }
+
+        h1 {
+            margin: 0;
+            padding: 0.5rem 0;
+            border-bottom: 1px solid black;
+        }
+
+        form {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            & input,
+            textarea {
+                padding: 0.5rem;
+            }
+
+            & button {
+                background-color: black;
+                color: white;
+                padding: 0.5rem 1rem;
+                margin-top: 0.5rem;
+                border: none;
+            }
+        }
+    </style>
 </head>
 
 <body>
-    <h1>The Censor</h1>
-    <h3>Type your message and the word to censor</h3>
+    <h1>The Censor 🤐</h1>
 
     <form action="script.php" method="get">
-        <input type="text" name="badword" placeholder="Type the word to censor">
-        <textarea name="message" id="msg" cols="30" rows="10" placeholder="Type your message"></textarea>
+        <label for="badword">
+            <h4>The word to censor</h4>
+            <input type="text" name="badword" id="badword" placeholder="Type the word to censor">
+        </label>
+        <label for="msg">
+            <h4>Your message</h4>
+            <textarea name="message" id="msg" cols="30" rows="10" placeholder="Type your message"></textarea>
+        </label>
         <button type="submit">Censor!</button>
     </form>
 </body>
