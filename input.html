@@ -8,8 +8,14 @@
 </head>
 
 <body>
+    <h1>The Censor</h1>
+    <h3>Type your message and the word to censor</h3>
 
-
+    <form action="script.php" method="get">
+        <input type="text" name="badword" placeholder="Type the word to censor">
+        <textarea name="message" id="msg" cols="30" rows="10" placeholder="Type your message"></textarea>
+        <button type="submit">Censor!</button>
+    </form>
 </body>
 
 </html>
