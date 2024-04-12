@@ -2,6 +2,7 @@
 $badWord = trim($_GET['badword']);
 $message = trim($_GET['message']);
 //var_dump($message);
+
 $censoredMsg = str_replace($badWord,'***',$message);
 
 ?>
